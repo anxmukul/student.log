@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 struct student{
     char str[20];
     int roll;
@@ -36,7 +37,14 @@ void searchroll(void){
 
 }
 void searchname(void){
-
+    char str1[20];
+    printf("Enter the name of the student\n");
+    scanf("%s",str1);
+    for(int i=0; i<40; i++){
+        if(strcmp(str1,std[i].str) == 0){
+            printf("Name-%s\nClass-%d\nRoll no-%d\n",std[i].str,std[i].class,std[i].roll);
+        }
+    }
 }
 void addstudent(void){
     int s;
