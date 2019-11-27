@@ -4,14 +4,14 @@ struct student{
     int roll;
     int class;
     char sec;
-}std[];
+}std[10];
 void add(int x){
     for(int i=0; i<x; i++){
     printf("Enter the name,class, section and roll no. respectively\n");
-    scanf("%s",std[x].str);
-    scanf("%d",&std[x].class);
-    scanf("%c ",&std[x].sec);
-    scanf("%d",&std[x].roll);
+    scanf("%s",std[i].str);
+    scanf("%d",&std[i].class);
+    scanf("%c",&std[i].sec);
+    scanf("%d",&std[i].roll);
     
     }
 }
@@ -34,7 +34,7 @@ int main(){
     int n,s;
      printf("This programme can perform following operations. Choose your operation and the respective number.\n");
         printf("1. Show list of all students.\n2. Find student by roll number.\n3. Find student by name.\n4. Add a new student.\n5. Quit the programme.\n");
-    while(1>0){
+    //while(1>0){
        printf("Enter the number according your operation\n");
        scanf("%d",&n);
        switch (n)
@@ -61,4 +61,4 @@ int main(){
         printf("Try again\n");
        }
     }
-}
+//}
