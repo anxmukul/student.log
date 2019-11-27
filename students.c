@@ -9,7 +9,7 @@ struct student{
 void add(int x){
     for(int i=0; i<x; i++){
     printf("Enter the name,class and roll no. respectively\n");
-    scanf("%[^\n]",std[i].str);
+    scanf("%s",std[i].str);
     scanf("%d",&std[i].class);
     //scanf("%c",&std[i].sec);
     scanf("%d",&std[i].roll);
@@ -53,7 +53,7 @@ void addstudent(void){
     add(s);
 }
 int main(){
-    int n,s;
+    int n,s,t;
      printf("This programme can perform following operations. Choose your operation and the respective number.\n");
         printf("1. Show list of all students.\n2. Find student by roll number.\n3. Find student by name.\n4. Add a new student.\n5. Quit the programme.\n");
     while(1>0){
@@ -78,10 +78,11 @@ int main(){
         printf("You want to add new student details\n");
            addstudent();
             break;
-            case 5:
-            break;
         default:
-        printf("Try again\n");
+        printf("");
+       }
+       if(n == 5){
+           break;
        }
     }
 }
