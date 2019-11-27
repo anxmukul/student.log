@@ -4,21 +4,35 @@ struct student{
     int roll;
     int class;
     char sec;
-}std[10];
+}std[40];
 void add(int x){
     for(int i=0; i<x; i++){
-    printf("Enter the name,class, section and roll no. respectively\n");
+    printf("Enter the name,class and roll no. respectively\n");
     scanf("%s",std[i].str);
     scanf("%d",&std[i].class);
-    scanf("%c",&std[i].sec);
+    //scanf("%c",&std[i].sec);
     scanf("%d",&std[i].roll);
-    
     }
 }
 void listallstudent(void){
-
+    for(int i=0; i<40; i++){
+        
+        printf("%s\n",std[i].str);
+        printf("%d\n",std[i].class);
+        //printf("%c",std[i].sec);
+        printf("%d\n",std[i].roll);
+    }
+    
 }
 void searchroll(void){
+    int r;
+    printf("Enter the roll of student\n");
+    scanf("%d",&r);
+    for(int i=0; i<40; i++){
+        if(r == std[i].roll){
+            printf("Name-%s\nClass-%d\n",std[i].str,std[i].class);
+        }
+    }
 
 }
 void searchname(void){
@@ -34,13 +48,14 @@ int main(){
     int n,s;
      printf("This programme can perform following operations. Choose your operation and the respective number.\n");
         printf("1. Show list of all students.\n2. Find student by roll number.\n3. Find student by name.\n4. Add a new student.\n5. Quit the programme.\n");
-    //while(1>0){
+    while(1>0){
        printf("Enter the number according your operation\n");
        scanf("%d",&n);
        switch (n)
        {
         case 1:
         printf("You choose to list all student\n");
+        printf("Here is the list of all student\n");
            listallstudent();
             break;
         case 2:
@@ -61,4 +76,4 @@ int main(){
         printf("Try again\n");
        }
     }
-//}
+}
