@@ -9,7 +9,7 @@ struct student{
 void add(int x){
     for(int i=0; i<x; i++){
     printf("Enter the name,class and roll no. respectively\n");
-    scanf("%s",std[i].str);
+    scanf("%[^\n]",std[i].str);
     scanf("%d",&std[i].class);
     //scanf("%c",&std[i].sec);
     scanf("%d",&std[i].roll);
