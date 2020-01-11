@@ -6,16 +6,16 @@ struct student{
     int class;
     char sec;
 }std[40];
-void add(int x){
+void add(int x){            // Fuction for adding student with vois return type
     for(int i=0; i<x; i++){
-    printf("Enter the name,class and roll no. respectively\n");
+    printf("Enter the name,class and roll no. respectively\n"); 
     scanf("%s",std[i].str);
     scanf("%d",&std[i].class);
     //scanf("%c",&std[i].sec);
     scanf("%d",&std[i].roll);
     }
 }
-void listallstudent(void){
+void listallstudent(void){       // This function will give you list of all student
     for(int i=0; i<40; i++){
         
         printf("%s\n",std[i].str);
@@ -25,7 +25,7 @@ void listallstudent(void){
     }
     
 }
-void searchroll(void){
+void searchroll(void){          // This function work for seaching student by roll no.
     int r;
     printf("Enter the roll of student\n");
     scanf("%d",&r);
@@ -36,7 +36,7 @@ void searchroll(void){
     }
 
 }
-void searchname(void){
+void searchname(void){      // This fnction work for seaching student by name.
     char str1[20];
     printf("Enter the name of the student\n");
     scanf("%s",str1);
@@ -46,7 +46,7 @@ void searchname(void){
         }
     }
 }
-void addstudent(void){
+void addstudent(void){      // This function will take you to add student function.
     int s;
     printf("Enter the number of students\n");
     scanf("%d",&s);
